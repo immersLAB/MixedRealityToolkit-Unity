@@ -54,7 +54,8 @@ namespace MixedReality.Toolkit.Input
         [SerializeField]
         [Tooltip("Renderer of the hand mesh")]
         private SkinnedMeshRenderer handRenderer = null;
-
+ 
+      
         [SerializeField]
         [Tooltip("Name of the shader property used to drive pinch-amount-based visual effects. " +
                  "Generally, maps to something like a glow or an outline color!")]

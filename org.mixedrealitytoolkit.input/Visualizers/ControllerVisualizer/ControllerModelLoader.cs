@@ -106,8 +106,10 @@ namespace MixedReality.Toolkit.Input
             GltfImport gltf = new GltfImport();
             bool success = await gltf.LoadGltfBinary(modelStream);
             gltfGameObject = new GameObject(modelKey.ToString());
+            Debug.Log("InstantiateMainScene");
             if (success && gltf.InstantiateMainScene(gltfGameObject.transform))
             {
+               
                 // After all the awaits, double check that another task didn't finish earlier
                 if (controllerModelDictionary.TryGetValue(modelKey, out GameObject existingGameObject) && existingGameObject != null)
                 {

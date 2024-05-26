@@ -75,3 +75,5 @@ MSBuild/
 scripts/test/out/
 [Uu]serSettings/
 UWP/
+/UnityProjects/MRTKDevTemplate/Assets/Hand_Streaming_scripts/PunInstantiator.cs
+/UnityProjects/MRTKDevTemplate/Assets/Hand_Streaming_scripts/PunInstantiator.cs
