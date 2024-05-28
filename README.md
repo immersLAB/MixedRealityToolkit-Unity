@@ -1,3 +1,46 @@
+
+# HoloLens 2 Hand Tracking and Streaming Project (MRTK3)
+
+This project enables the rendering of tracked hands on HoloLens 2 and streams them to a Unity scene on PC.
+
+## Demo Video
+To see the project in action, please watch the demo video:
+[Demo Video](https://drive.google.com/file/d/1QZ8yvLLMu4gJsWOG0udJR0l6v1LFMqCa/view?usp=sharing)  
+
+## Project Repository
+You can find the project code and assets in the following GitHub repository:
+[MixedRealityToolkit-Unity/UnityProjects/MRTKDevTemplate/](https://github.com/MixedRealityToolkit-Unity/UnityProjects/MRTKDevTemplate/) - This project is based on the official MRTK3 template, specifically the hand interaction scene.
+
+### Unity Version
+Unity 2021.3.29f1.
+
+### Modifications to PUN2
+A slight modification has been made to the PUN2 source code. The boolean `IsMine` in `PhotonView` is made public. Note: This change needs to be redone if reimporting Photon.
+
+## How to Use
+<details>
+  <summary>Click to expand!</summary>
+  <br>
+
+  ### Setup Instructions
+  1. Clone the repository from [GitHub](https://github.com/MixedRealityToolkit-Unity/UnityProjects/MRTKDevTemplate/).
+  2. Open the project with Unity 2021.3.29f1
+  4. Deploy the HL_Hand_Streaming scene to HoloLens 2.
+  5. Run the PC_Hand_Streaming scene on your PC to start receiving hand tracking data (click editor occassionally otherwise it stops updating).
+
+</details>
+
+
+
+
+
+
+<details>
+  <summary>MRTK3 Unity Documentation</summary>
+  <br>
+
+  
+
 # Mixed Reality Toolkit for Unity
 
 ![Mixed Reality Toolkit](https://user-images.githubusercontent.com/13754172/122838732-89ea3400-d2ab-11eb-8c79-32dd84944989.png)
@@ -83,3 +126,7 @@ For more information on how to contribute Mixed Reality Toolkit for Unity Projec
 ## Governance
 
 For information on how the Mixed Reality Toolkit for Unity Project is governed, please read [GOVERNANCE.md](./GOVERNANCE.md).
+
+</details>
+
+
