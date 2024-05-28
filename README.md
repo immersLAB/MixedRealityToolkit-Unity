@@ -2,10 +2,8 @@
 # HoloLens 2 Hand Tracking and Streaming Project (MRTK3)
 
 This project enables the rendering of tracked hands on HoloLens 2 and streams them to a Unity scene on PC.
+![demo](https://github.com/mrcfschr/MixedRealityToolkit-Unity/assets/57159035/72342e0d-f9a4-4480-a826-0695d9ce5d9c)
 
-## Demo Video
-To see the project in action, please watch the demo video:
-[Demo Video](https://drive.google.com/file/d/1QZ8yvLLMu4gJsWOG0udJR0l6v1LFMqCa/view?usp=sharing)  
 
 ## Project Repository
 You can find the project code and assets in the following GitHub repository:
