@@ -15,6 +15,27 @@ Unity 2021.3.29f1.
 ### Modifications to PUN2
 A slight modification has been made to the PUN2 source code. The boolean `IsMine` in `PhotonView` is made public. Note: This change needs to be redone if reimporting Photon.
 
+## Key Scripts Overview
+
+### ConnectToServer.cs
+[ConnectToServer.cs](https://github.com/immersLAB/MixedRealityToolkit-Unity/blob/main/UnityProjects/MRTKDevTemplate/Assets/Hand_Streaming_scripts/ConnectToServer.cs): This script enables the connection of both HoloLens and the PC to the Photon Unity Networking (PUN) cloud. Once both are connected, rigged hand models are instantiated across the network.
+
+### Rigged Hand Models
+Rigged hand models must be stored in the resource folder: [Resource Folder](https://github.com/immersLAB/MixedRealityToolkit-Unity/tree/main/UnityProjects/MRTKDevTemplate/Assets/Resources). Each joint of the hand model is equipped with `PhotonView`, `PhotonTransformView`, and `Owner` scripts to synchronize the pose over the network. The `Owner` script determines who can set and who can read the pose. For instance, the HoloLens sets all poses, while the PC only reads them. Hand materials are stored here as well, e.g., if you want to adjust the HoloLens hands to be rendered white on the PC side and invisible but blocking on the HL side, this can be done here.
+
+### PUNRiggedHandMeshVisualizer.cs
+[PUNRiggedHandMeshVisualizer.cs](https://github.com/immersLAB/MixedRealityToolkit-Unity/blob/main/UnityProjects/MRTKDevTemplate/Assets/PUNRiggedHandMeshVisualizer.cs): This script retrieves joint poses from HoloLens hand tracking. It also synchronizes the hand's scale and visibility across the network (i.e., whether they are currently tracked and should be visible). This script also allows for setting whether hands are rendered or not on HoloLens via showHandsOnTransparentDisplays.
+
+### Scene Configuration
+Both the HoloLens scene and the PC scene load the same hand model, but the ownership properties differ:
+- **PC Scene**: `Owner` property must be set to `false`.
+- **HoloLens Scene**: `Owner` property must be set to `true`.
+
+### SceneOpenedHandler.cs
+[SceneOpenedHandler.cs](https://github.com/immersLAB/MixedRealityToolkit-Unity/blob/main/UnityProjects/MRTKDevTemplate/Assets/Editor/SceneOpenedHandler.cs): This script automatically toggles the `Owner` property in the prefabs each time a respective scene is opened, ensuring proper synchronization and control based on the active platform.
+
+
+
 ## How to Use
 <details>
   <summary>Click to expand!</summary>
